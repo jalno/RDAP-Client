@@ -16,6 +16,8 @@ interface RdapProtocolInterface
 
     public function getName() : string;
 
+    public function getClient(): RdapClientInterface;
+
     public function getService() : RdapServiceInterface;
 
     public function getFindURL(string $target) : ?string;

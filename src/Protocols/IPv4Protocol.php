@@ -33,7 +33,7 @@ class IPv4Protocol extends AbstractIPProtocol
      */
     public function getService(): Ipv4Service
     {
-        return $this->services ??= Ipv4Service::fromURL(self::IPV4_URI);
+        return $this->services ??= Ipv4Service::fromURL(self::IPV4_URI, $this->client->getHttpClient());
     }
 
     public function createResponse(string $response, RdapRequestInterface $request): RdapResponseInterface

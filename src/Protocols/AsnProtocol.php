@@ -28,7 +28,7 @@ class AsnProtocol extends AbstractRdapProtocol
      */
     public function getService(): AsnService
     {
-        return $this->services ??= AsnService::fromURL(self::ASN_URI);
+        return $this->services ??= AsnService::fromURL(self::ASN_URI, $this->client->getHttpClient());
     }
 
     /**

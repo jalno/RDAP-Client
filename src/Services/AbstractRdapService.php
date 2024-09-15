@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace ArrayAccess\RdapClient\Services;
 
+use ArrayAccess\RdapClient\Client;
 use ArrayAccess\RdapClient\Exceptions\FileNotFoundException;
 use ArrayAccess\RdapClient\Exceptions\InvalidServiceDefinitionException;
 use ArrayAccess\RdapClient\Interfaces\RdapRequestInterface;
@@ -11,6 +12,9 @@ use DateTimeImmutable;
 use DateTimeInterface;
 use DateTimeZone;
 use Exception;
+use Jalno\Http\Client as HttpClient;
+use Jalno\Http\Exceptions\ResponseException;
+
 use function array_keys;
 use function array_merge;
 use function array_search;
@@ -32,12 +36,8 @@ use function is_writable;
 use function json_decode;
 use function md5;
 use function mkdir;
-use function preg_match;
-use function restore_error_handler;
-use function set_error_handler;
 use function sprintf;
 use function str_starts_with;
-use function stream_context_create;
 use function sys_get_temp_dir;
 use function unlink;
 
@@ -231,21 +231,18 @@ abstract class AbstractRdapService implements RdapServiceInterface
     /**
      * @throws Exception
      */
-    public static function fromURL(string $url) : static
+    public static function fromURL(string $url, HttpClient $client = null) : static
     {
-        $fileCache = null;
-        $isUseHttp = preg_match('~https?://~i', $url);
-        if ($isUseHttp) {
+        $content = null;
+        $isUrl = str_starts_with($url, 'http://') || str_starts_with($url, 'https://');
+        if ($isUrl) {
             self::$tempDir ??= sys_get_temp_dir();
             if (is_dir(self::$tempDir) && is_writable(self::$tempDir)) {
                 $rdapDir = self::$tempDir .'/rdap-php';
                 if (!file_exists($rdapDir)) {
-                    set_error_handler(static function () {
-                        error_clear_last();
-                    });
                     mkdir($rdapDir, 0755, true);
-                    restore_error_handler();
                 }
+
                 $fileCache = $rdapDir . '/rdap-'. md5($url).'.json';
                 if (is_file($fileCache)
                     && is_readable($fileCache)
@@ -268,32 +265,34 @@ abstract class AbstractRdapService implements RdapServiceInterface
                             $data['services']
                         );
                     }
-                    $isWritable = is_writable($fileCache);
-                    if ($isWritable) {
+
+                    if (is_writable($fileCache)) {
                         unlink($fileCache);
                     }
                 }
-                $fileCache = ($isWritable??true) === true
-                    && is_writable(dirname($fileCache)) ? $fileCache : null;
+            }
+
+            if (!$client) {
+                $client = new HttpClient();
+            }
+
+            try {
+                $content = $client->get($url)->getBody();
+            } catch (ResponseException $e) {
+                throw new InvalidServiceDefinitionException(
+                    sprintf('Protocol service URL "%s" return invalid data', $url),
+                    $e->getCode(),
+                    $e
+                );
             }
         }
 
-        set_error_handler(static fn () => error_clear_last());
-        $content = file_get_contents(
-            $url,
-            false,
-            $isUseHttp ? stream_context_create(
-                RdapRequestInterface::DEFAULT_STREAM_CONTEXT
-            ) : null
-        );
-        restore_error_handler();
-
         $data = is_string($content) ? json_decode($content, true) : null;
         if (!is_array($data)
-            || !is_string($data['version']??null)
-            || !is_string($data['description']??null)
-            || !is_string($data['publication']??null)
-            || !is_array($data['services']??null)
+            || !is_string($data['version'] ?? null)
+            || !is_string($data['description'] ?? null)
+            || !is_string($data['publication'] ?? null)
+            || !is_array($data['services'] ?? null)
         ) {
             throw new InvalidServiceDefinitionException(
                 sprintf('Protocol service URL "%s" return invalid data', $url)

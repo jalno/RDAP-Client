@@ -8,16 +8,13 @@ use ArrayAccess\RdapClient\Exceptions\RdapRemoteRequestException;
 use ArrayAccess\RdapClient\Interfaces\RdapProtocolInterface;
 use ArrayAccess\RdapClient\Interfaces\RdapRequestInterface;
 use ArrayAccess\RdapClient\Interfaces\RdapResponseInterface;
+use Jalno\Http\Exceptions\ResponseException;
 use RuntimeException;
 use function array_pop;
 use function explode;
-use function file_get_contents;
-use function restore_error_handler;
-use function set_error_handler;
 use function sprintf;
 use function str_contains;
 use function str_ends_with;
-use function stream_context_create;
 
 class RdapRequestProtocol implements RdapRequestInterface
 {
@@ -114,26 +111,16 @@ class RdapRequestProtocol implements RdapRequestInterface
                 $this->errorCode
             );
         }
-        set_error_handler(function ($code, $message) {
-            $this->errorCode = $code;
-            $this->errorMessage = $message;
-        });
-        $context = RdapRequestInterface::DEFAULT_STREAM_CONTEXT;
-        $content = file_get_contents(
-            $this->rdapSearchURL,
-            false,
-            stream_context_create(
-                $context
-            )
-        );
-        restore_error_handler();
-        if (!$content) {
+        try {
+            $response = $this->getProtocol()->getClient()->getHttpClient()->get($this->rdapSearchURL);
+
+            return $this->response = $this->protocol->createResponse($response->getBody(), $this);
+        } catch (ResponseException $e) {
             throw new RdapRemoteRequestException(
-                $this->errorMessage,
-                $this->errorCode
+                $e->getMessage(),
+                $e->getCode(),
+                $e
             );
         }
-
-        return $this->response = $this->protocol->createResponse($content, $this);
     }
 }

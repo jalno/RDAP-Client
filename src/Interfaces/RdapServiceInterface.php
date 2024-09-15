@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace ArrayAccess\RdapClient\Interfaces;
 
 use DateTimeInterface;
+use Jalno\Http\Client;
 
 interface RdapServiceInterface
 {
@@ -23,7 +24,7 @@ interface RdapServiceInterface
 
     public function getPublication() : DateTimeInterface;
 
-    public static function fromURL(string $url) : static;
+    public static function fromURL(string $url, Client $client) : static;
 
     public static function fromFile(string $file) : static;
 

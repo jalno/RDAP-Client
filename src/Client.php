@@ -15,6 +15,8 @@ use ArrayAccess\RdapClient\Protocols\IPv6Protocol;
 use ArrayAccess\RdapClient\Protocols\NsProtocol;
 use ArrayAccess\RdapClient\Services\AsnService;
 use ArrayAccess\RdapClient\Util\CIDR;
+use Jalno\Http\Client as HttpClient;
+
 use function explode;
 use function idn_to_ascii;
 use function is_a;
@@ -28,6 +30,9 @@ use function strlen;
 use function strtolower;
 use function trim;
 
+/**
+ * @phpstan-import-type Options from \Jalno\Http\Contracts\IHandler
+ */
 class Client implements RdapClientInterface
 {
     const VERSION = '1.0.0';
@@ -39,6 +44,8 @@ class Client implements RdapClientInterface
         self::DOMAIN => DomainProtocol::class,
         self::NS => NsProtocol::class,
     ];
+
+    protected ?HttpClient $httpClient = null;
 
     /**
      * @var array<class-string<RdapProtocolInterface>|RdapProtocolInterface>
@@ -80,6 +87,37 @@ class Client implements RdapClientInterface
             return $this->protocols[$protocolType];
         }
         throw new UnsupportedProtocolException($protocolType);
+    }
+
+    /**
+     * @return Options
+     */
+    public static function getDefaultHttpClientOptions(): array
+    {
+        return [
+            'timeout' => 10,
+            'headers' => [
+                'Accept' => 'application/json',
+                'Connection' => 'Close',
+                'Cache-Control' => 'no-cache',
+                'User-Agent' => 'Jalno-RDAP-Client/' . Client::VERSION,
+            ]
+        ];
+    }
+
+    public function getHttpClient(): HttpClient
+    {
+        if (!$this->httpClient) {
+            $this->httpClient = new HttpClient(
+                $this->getDefaultHttpClientOptions()
+            );
+        }
+        return $this->httpClient;
+    }
+
+    public function setHttpClient(HttpClient $client): void
+    {
+        $this->httpClient = $client;
     }
 
     /**

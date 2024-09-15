@@ -32,7 +32,7 @@ class IPv6Protocol extends AbstractIPProtocol
      */
     public function getService(): Ipv6Service
     {
-        return $this->services ??= Ipv6Service::fromURL(self::IPV6_URI);
+        return $this->services ??= Ipv6Service::fromURL(self::IPV6_URI, $this->client->getHttpClient());
     }
 
     public function createResponse(string $response, RdapRequestInterface $request): RdapResponseInterface

@@ -33,7 +33,7 @@ class DomainProtocol extends AbstractRdapProtocol
      */
     public function getService(): DomainService
     {
-        return $this->services ??= DomainService::fromURL(self::DOMAIN_URI);
+        return $this->services ??= DomainService::fromURL(self::DOMAIN_URI, $this->client->getHttpClient());
     }
 
     /**

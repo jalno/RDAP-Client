@@ -92,7 +92,7 @@ class Client implements RdapClientInterface
     /**
      * @return Options
      */
-    public static function getDefaultHttpClientOptions(): array
+    public function getDefaultHttpClientOptions(): array
     {
         return [
             'timeout' => 10,

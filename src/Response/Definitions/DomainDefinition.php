@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Definitions;
+namespace Jalno\RdapClient\Response\Definitions;
 
-use ArrayAccess\RdapClient\Response\Data\LdhName;
-use ArrayAccess\RdapClient\Response\Data\NameServers;
-use ArrayAccess\RdapClient\Response\Data\SecureDNS;
+use Jalno\RdapClient\Response\Data\LdhName;
+use Jalno\RdapClient\Response\Data\NameServers;
+use Jalno\RdapClient\Response\Data\SecureDNS;
 
 class DomainDefinition extends AbstractResponseDefinition
 {

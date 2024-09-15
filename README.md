@@ -42,13 +42,13 @@ See [Client.php](src/Client.php) for more methods
 
 
 ```php
-use ArrayAccess\RdapClient\Client;
-use ArrayAccess\RdapClient\Interfaces\RdapRequestInterface;
-use ArrayAccess\RdapClient\Protocols\AsnProtocol;
-use ArrayAccess\RdapClient\Protocols\DomainProtocol;
-use ArrayAccess\RdapClient\Protocols\IPv4Protocol;
-use ArrayAccess\RdapClient\Protocols\IPv6Protocol;
-use ArrayAccess\RdapClient\Protocols\NsProtocol;
+use Jalno\RdapClient\Client;
+use Jalno\RdapClient\Interfaces\RdapRequestInterface;
+use Jalno\RdapClient\Protocols\AsnProtocol;
+use Jalno\RdapClient\Protocols\DomainProtocol;
+use Jalno\RdapClient\Protocols\IPv4Protocol;
+use Jalno\RdapClient\Protocols\IPv6Protocol;
+use Jalno\RdapClient\Protocols\NsProtocol;
 
 $client = new Client();
 /**

@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Traits;
+namespace Jalno\RdapClient\Response\Traits;
 
-use ArrayAccess\RdapClient\Exceptions\InvalidDataTypeException;
-use ArrayAccess\RdapClient\Exceptions\MismatchDataBehaviorException;
+use Jalno\RdapClient\Exceptions\InvalidDataTypeException;
+use Jalno\RdapClient\Exceptions\MismatchDataBehaviorException;
 use function gettype;
 use function is_a;
 use function is_array;

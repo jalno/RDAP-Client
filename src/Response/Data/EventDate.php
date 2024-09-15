@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Data;
+namespace Jalno\RdapClient\Response\Data;
 
-use ArrayAccess\RdapClient\Response\Data\Abstracts\AbstractDateData;
+use Jalno\RdapClient\Response\Data\Abstracts\AbstractDateData;
 
 class EventDate extends AbstractDateData
 {

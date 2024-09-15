@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Protocols;
+namespace Jalno\RdapClient\Protocols;
 
 abstract class AbstractIPProtocol extends AbstractRdapProtocol
 {

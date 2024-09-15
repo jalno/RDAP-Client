@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Data\NonStandards;
+namespace Jalno\RdapClient\Response\Data\NonStandards;
 
-use ArrayAccess\RdapClient\Response\Data\Abstracts\AbstractRdapResponseDataStringEmptyName;
+use Jalno\RdapClient\Response\Data\Abstracts\AbstractRdapResponseDataStringEmptyName;
 use Stringable;
 
 class UnnamedStringData extends AbstractRdapResponseDataStringEmptyName

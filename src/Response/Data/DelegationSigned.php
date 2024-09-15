@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Data;
+namespace Jalno\RdapClient\Response\Data;
 
-use ArrayAccess\RdapClient\Response\Data\Abstracts\AbstractBooleanData;
+use Jalno\RdapClient\Response\Data\Abstracts\AbstractBooleanData;
 
 class DelegationSigned extends AbstractBooleanData
 {

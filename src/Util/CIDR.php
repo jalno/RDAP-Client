@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Util;
+namespace Jalno\RdapClient\Util;
 
 use function bin2hex;
 use function dechex;

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Traits;
+namespace Jalno\RdapClient\Response\Traits;
 
 use function is_array;
 

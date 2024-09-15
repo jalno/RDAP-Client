@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Abstracts;
+namespace Jalno\RdapClient\Response\Abstracts;
 
-use ArrayAccess\RdapClient\Response\Definitions\IpDefinition;
+use Jalno\RdapClient\Response\Definitions\IpDefinition;
 
 abstract class AbstractIpResponse extends AbstractResponse
 {

@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Abstracts;
+namespace Jalno\RdapClient\Response\Abstracts;
 
-use ArrayAccess\RdapClient\Exceptions\InvalidDataTypeException;
-use ArrayAccess\RdapClient\Exceptions\MismatchProtocolBehaviorException;
-use ArrayAccess\RdapClient\Interfaces\RdapProtocolInterface;
-use ArrayAccess\RdapClient\Interfaces\RdapRequestInterface;
-use ArrayAccess\RdapClient\Interfaces\RdapResponseInterface;
-use ArrayAccess\RdapClient\Response\Traits\AllowedKeyDataTraits;
+use Jalno\RdapClient\Exceptions\InvalidDataTypeException;
+use Jalno\RdapClient\Exceptions\MismatchProtocolBehaviorException;
+use Jalno\RdapClient\Interfaces\RdapProtocolInterface;
+use Jalno\RdapClient\Interfaces\RdapRequestInterface;
+use Jalno\RdapClient\Interfaces\RdapResponseInterface;
+use Jalno\RdapClient\Response\Traits\AllowedKeyDataTraits;
 use function get_class;
 use function is_array;
 use function is_string;

@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Data\Definitions;
+namespace Jalno\RdapClient\Response\Data\Definitions;
 
-use ArrayAccess\RdapClient\Response\Data\Abstracts\AbstractObjectiveClassNameDataDefinition;
-use ArrayAccess\RdapClient\Response\Data\ObjectClassName;
+use Jalno\RdapClient\Response\Data\Abstracts\AbstractObjectiveClassNameDataDefinition;
+use Jalno\RdapClient\Response\Data\ObjectClassName;
 
 class NameserverDefinitionObjectClassName extends AbstractObjectiveClassNameDataDefinition
 {

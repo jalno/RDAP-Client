@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Interfaces;
+namespace Jalno\RdapClient\Interfaces;
 
-use ArrayAccess\RdapClient\Interfaces\ResponseData\RdapResponseDataConformanceDataInterface;
-use ArrayAccess\RdapClient\Interfaces\ResponseData\RdapResponseDataConformanceInterface;
-use ArrayAccess\RdapClient\Interfaces\ResponseData\RdapResponseDataErrorCodeInterface;
-use ArrayAccess\RdapClient\Interfaces\ResponseData\RdapResponseDataObjectDataClassNameInterface;
+use Jalno\RdapClient\Interfaces\ResponseData\RdapResponseDataConformanceDataInterface;
+use Jalno\RdapClient\Interfaces\ResponseData\RdapResponseDataConformanceInterface;
+use Jalno\RdapClient\Interfaces\ResponseData\RdapResponseDataErrorCodeInterface;
+use Jalno\RdapClient\Interfaces\ResponseData\RdapResponseDataObjectDataClassNameInterface;
 use JsonSerializable;
 use Stringable;
 

@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Definitions;
+namespace Jalno\RdapClient\Response\Definitions;
 
-use ArrayAccess\RdapClient\Response\Data\IpAddresses;
-use ArrayAccess\RdapClient\Response\Data\LdhName;
+use Jalno\RdapClient\Response\Data\IpAddresses;
+use Jalno\RdapClient\Response\Data\LdhName;
 
 class NsDefinition extends AbstractResponseDefinition
 {

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Services;
+namespace Jalno\RdapClient\Services;
 
 /**
  * @link https://www.iana.org/assignments/ipv4-recovered-address-space/ipv4-recovered-address-space.xhtml

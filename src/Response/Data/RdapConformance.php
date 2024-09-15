@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Data;
+namespace Jalno\RdapClient\Response\Data;
 
-use ArrayAccess\RdapClient\Interfaces\ResponseData\RdapResponseDataConformanceInterface;
-use ArrayAccess\RdapClient\Response\Data\Abstracts\AbstractRdapResponseDataRecursiveNamed;
-use ArrayAccess\RdapClient\Response\Data\Definitions\UnnamedRecursiveArrayEmptyNameData;
+use Jalno\RdapClient\Interfaces\ResponseData\RdapResponseDataConformanceInterface;
+use Jalno\RdapClient\Response\Data\Abstracts\AbstractRdapResponseDataRecursiveNamed;
+use Jalno\RdapClient\Response\Data\Definitions\UnnamedRecursiveArrayEmptyNameData;
 use Stringable;
 use function str_starts_with;
 

@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Data\Definitions;
+namespace Jalno\RdapClient\Response\Data\Definitions;
 
-use ArrayAccess\RdapClient\Interfaces\ResponseData\RdapResponseDataNamedInterface;
-use ArrayAccess\RdapClient\Response\Data\Abstracts\AbstractRdapResponseDataRecursiveArrayEmptyName;
+use Jalno\RdapClient\Interfaces\ResponseData\RdapResponseDataNamedInterface;
+use Jalno\RdapClient\Response\Data\Abstracts\AbstractRdapResponseDataRecursiveArrayEmptyName;
 
 class NoticesDefinition extends AbstractRdapResponseDataRecursiveArrayEmptyName
 {

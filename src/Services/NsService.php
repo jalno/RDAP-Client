@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Services;
+namespace Jalno\RdapClient\Services;
 
 class NsService extends DomainService
 {

@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Definitions;
+namespace Jalno\RdapClient\Response\Definitions;
 
-use ArrayAccess\RdapClient\Response\Data\EndAddress;
-use ArrayAccess\RdapClient\Response\Data\IpVersion;
-use ArrayAccess\RdapClient\Response\Data\Port43;
-use ArrayAccess\RdapClient\Response\Data\StartAddress;
+use Jalno\RdapClient\Response\Data\EndAddress;
+use Jalno\RdapClient\Response\Data\IpVersion;
+use Jalno\RdapClient\Response\Data\Port43;
+use Jalno\RdapClient\Response\Data\StartAddress;
 
 class IpDefinition extends AbstractResponseDefinition
 {

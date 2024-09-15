@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Data;
+namespace Jalno\RdapClient\Response\Data;
 
-use ArrayAccess\RdapClient\Interfaces\ResponseData\RdapResponseDataErrorCodeInterface;
-use ArrayAccess\RdapClient\Response\Data\Abstracts\AbstractIntegerData;
+use Jalno\RdapClient\Interfaces\ResponseData\RdapResponseDataErrorCodeInterface;
+use Jalno\RdapClient\Response\Data\Abstracts\AbstractIntegerData;
 
 class ErrorCode extends AbstractIntegerData implements RdapResponseDataErrorCodeInterface
 {

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Services;
+namespace Jalno\RdapClient\Services;
 
 use function explode;
 use function idn_to_ascii;

@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Data\Abstracts;
+namespace Jalno\RdapClient\Response\Data\Abstracts;
 
-use ArrayAccess\RdapClient\Interfaces\ResponseData\RdapResponseDataIntegerInterface;
-use ArrayAccess\RdapClient\Interfaces\ResponseData\RdapResponseDataNamedInterface;
-use ArrayAccess\RdapClient\Response\Traits\AllowedKeyDataTraits;
+use Jalno\RdapClient\Interfaces\ResponseData\RdapResponseDataIntegerInterface;
+use Jalno\RdapClient\Interfaces\ResponseData\RdapResponseDataNamedInterface;
+use Jalno\RdapClient\Response\Traits\AllowedKeyDataTraits;
 
 abstract class AbstractIntegerData implements RdapResponseDataIntegerInterface, RdapResponseDataNamedInterface
 {

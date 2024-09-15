@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Data;
+namespace Jalno\RdapClient\Response\Data;
 
-use ArrayAccess\RdapClient\Response\Data\Abstracts\AbstractRdapResponseDataRecursiveArray;
-use ArrayAccess\RdapClient\Response\Data\Definitions\DomainDefinitionObjectClassName;
+use Jalno\RdapClient\Response\Data\Abstracts\AbstractRdapResponseDataRecursiveArray;
+use Jalno\RdapClient\Response\Data\Definitions\DomainDefinitionObjectClassName;
 use function array_values;
 
 class DomainSearchResults extends AbstractRdapResponseDataRecursiveArray

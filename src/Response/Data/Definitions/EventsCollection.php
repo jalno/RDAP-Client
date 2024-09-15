@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Data\Definitions;
+namespace Jalno\RdapClient\Response\Data\Definitions;
 
-use ArrayAccess\RdapClient\Response\Data\Abstracts\AbstractRdapResponseDataRecursiveArrayEmptyName;
-use ArrayAccess\RdapClient\Response\Data\EventAction;
-use ArrayAccess\RdapClient\Response\Data\EventActor;
-use ArrayAccess\RdapClient\Response\Data\EventDate;
-use ArrayAccess\RdapClient\Response\Data\Links;
+use Jalno\RdapClient\Response\Data\Abstracts\AbstractRdapResponseDataRecursiveArrayEmptyName;
+use Jalno\RdapClient\Response\Data\EventAction;
+use Jalno\RdapClient\Response\Data\EventActor;
+use Jalno\RdapClient\Response\Data\EventDate;
+use Jalno\RdapClient\Response\Data\Links;
 
 class EventsCollection extends AbstractRdapResponseDataRecursiveArrayEmptyName
 {

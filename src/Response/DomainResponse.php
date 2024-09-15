@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response;
+namespace Jalno\RdapClient\Response;
 
-use ArrayAccess\RdapClient\Response\Abstracts\AbstractResponse;
-use ArrayAccess\RdapClient\Response\Definitions\DomainDefinition;
+use Jalno\RdapClient\Response\Abstracts\AbstractResponse;
+use Jalno\RdapClient\Response\Definitions\DomainDefinition;
 
 class DomainResponse extends AbstractResponse
 {

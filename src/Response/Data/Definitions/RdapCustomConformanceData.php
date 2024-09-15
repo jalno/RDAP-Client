@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Data\Definitions;
+namespace Jalno\RdapClient\Response\Data\Definitions;
 
-use ArrayAccess\RdapClient\Interfaces\ResponseData\RdapResponseDataInterface;
-use ArrayAccess\RdapClient\Interfaces\ResponseData\RdapResponseDataNamedInterface;
-use ArrayAccess\RdapClient\Response\Data\NonStandards\CustomNamedData;
-use ArrayAccess\RdapClient\Response\Data\NonStandards\CustomUnnamedArrayData;
-use ArrayAccess\RdapClient\Response\Data\NonStandards\CustomUnNamedData;
+use Jalno\RdapClient\Interfaces\ResponseData\RdapResponseDataInterface;
+use Jalno\RdapClient\Interfaces\ResponseData\RdapResponseDataNamedInterface;
+use Jalno\RdapClient\Response\Data\NonStandards\CustomNamedData;
+use Jalno\RdapClient\Response\Data\NonStandards\CustomUnnamedArrayData;
+use Jalno\RdapClient\Response\Data\NonStandards\CustomUnNamedData;
 use function is_array;
 use function is_iterable;
 

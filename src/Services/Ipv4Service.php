@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Services;
+namespace Jalno\RdapClient\Services;
 
-use ArrayAccess\RdapClient\Util\CIDR;
+use Jalno\RdapClient\Util\CIDR;
 use DateTimeInterface;
 use function array_merge;
 use function explode;

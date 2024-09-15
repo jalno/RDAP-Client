@@ -1,20 +1,20 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient;
+namespace Jalno\RdapClient;
 
-use ArrayAccess\RdapClient\Exceptions\EmptyArgumentException;
-use ArrayAccess\RdapClient\Exceptions\InvalidServiceDefinitionException;
-use ArrayAccess\RdapClient\Exceptions\UnsupportedProtocolException;
-use ArrayAccess\RdapClient\Interfaces\RdapClientInterface;
-use ArrayAccess\RdapClient\Interfaces\RdapProtocolInterface;
-use ArrayAccess\RdapClient\Protocols\AsnProtocol;
-use ArrayAccess\RdapClient\Protocols\DomainProtocol;
-use ArrayAccess\RdapClient\Protocols\IPv4Protocol;
-use ArrayAccess\RdapClient\Protocols\IPv6Protocol;
-use ArrayAccess\RdapClient\Protocols\NsProtocol;
-use ArrayAccess\RdapClient\Services\AsnService;
-use ArrayAccess\RdapClient\Util\CIDR;
+use Jalno\RdapClient\Exceptions\EmptyArgumentException;
+use Jalno\RdapClient\Exceptions\InvalidServiceDefinitionException;
+use Jalno\RdapClient\Exceptions\UnsupportedProtocolException;
+use Jalno\RdapClient\Interfaces\RdapClientInterface;
+use Jalno\RdapClient\Interfaces\RdapProtocolInterface;
+use Jalno\RdapClient\Protocols\AsnProtocol;
+use Jalno\RdapClient\Protocols\DomainProtocol;
+use Jalno\RdapClient\Protocols\IPv4Protocol;
+use Jalno\RdapClient\Protocols\IPv6Protocol;
+use Jalno\RdapClient\Protocols\NsProtocol;
+use Jalno\RdapClient\Services\AsnService;
+use Jalno\RdapClient\Util\CIDR;
 use Jalno\Http\Client as HttpClient;
 
 use function explode;

@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Data\Abstracts;
+namespace Jalno\RdapClient\Response\Data\Abstracts;
 
-use ArrayAccess\RdapClient\Interfaces\RdapServiceInterface;
-use ArrayAccess\RdapClient\Interfaces\ResponseData\RdapResponseDataStringableInterface;
-use ArrayAccess\RdapClient\Response\Traits\AllowedKeyDataTraits;
+use Jalno\RdapClient\Interfaces\RdapServiceInterface;
+use Jalno\RdapClient\Interfaces\ResponseData\RdapResponseDataStringableInterface;
+use Jalno\RdapClient\Response\Traits\AllowedKeyDataTraits;
 use DateTimeImmutable;
 use DateTimeInterface;
 use DateTimeZone;

@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Data\NonStandards;
+namespace Jalno\RdapClient\Response\Data\NonStandards;
 
-use ArrayAccess\RdapClient\Interfaces\ResponseData\RdapResponseDataInterface;
-use ArrayAccess\RdapClient\Interfaces\ResponseData\RdapResponseDataNamedInterface;
-use ArrayAccess\RdapClient\Response\Traits\AllowedKeyDataTraits;
+use Jalno\RdapClient\Interfaces\ResponseData\RdapResponseDataInterface;
+use Jalno\RdapClient\Interfaces\ResponseData\RdapResponseDataNamedInterface;
+use Jalno\RdapClient\Response\Traits\AllowedKeyDataTraits;
 use function is_array;
 
 class CustomNamedData implements RdapResponseDataInterface, RdapResponseDataNamedInterface

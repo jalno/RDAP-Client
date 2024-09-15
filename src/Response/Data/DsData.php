@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Data;
+namespace Jalno\RdapClient\Response\Data;
 
-use ArrayAccess\RdapClient\Response\Data\Abstracts\AbstractRdapResponseDataRecursiveArray;
-use ArrayAccess\RdapClient\Response\Data\Definitions\DsDataDefinition;
+use Jalno\RdapClient\Response\Data\Abstracts\AbstractRdapResponseDataRecursiveArray;
+use Jalno\RdapClient\Response\Data\Definitions\DsDataDefinition;
 use function array_values;
 
 class DsData extends AbstractRdapResponseDataRecursiveArray

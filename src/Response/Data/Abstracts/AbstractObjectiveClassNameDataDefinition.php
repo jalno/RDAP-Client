@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Data\Abstracts;
+namespace Jalno\RdapClient\Response\Data\Abstracts;
 
-use ArrayAccess\RdapClient\Interfaces\ResponseData\RdapResponseDataNamedInterface;
-use ArrayAccess\RdapClient\Response\Data\ObjectClassName;
+use Jalno\RdapClient\Interfaces\ResponseData\RdapResponseDataNamedInterface;
+use Jalno\RdapClient\Response\Data\ObjectClassName;
 
 abstract class AbstractObjectiveClassNameDataDefinition extends AbstractRdapResponseDataRecursiveArrayEmptyName
 {

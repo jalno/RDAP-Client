@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response;
+namespace Jalno\RdapClient\Response;
 
-use ArrayAccess\RdapClient\Response\Abstracts\AbstractIpResponse;
-use ArrayAccess\RdapClient\Response\Definitions\IpDefinition;
+use Jalno\RdapClient\Response\Abstracts\AbstractIpResponse;
+use Jalno\RdapClient\Response\Definitions\IpDefinition;
 
 class Ipv6Response extends AbstractIpResponse
 {

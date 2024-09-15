@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Data\Abstracts;
+namespace Jalno\RdapClient\Response\Data\Abstracts;
 
-use ArrayAccess\RdapClient\Interfaces\ResponseData\RdapResponseDataInterface;
-use ArrayAccess\RdapClient\Interfaces\ResponseData\RdapResponseDataRecursiveNamedInterface;
-use ArrayAccess\RdapClient\Response\Traits\AllowedKeyDataTraits;
+use Jalno\RdapClient\Interfaces\ResponseData\RdapResponseDataInterface;
+use Jalno\RdapClient\Interfaces\ResponseData\RdapResponseDataRecursiveNamedInterface;
+use Jalno\RdapClient\Response\Traits\AllowedKeyDataTraits;
 
 abstract class AbstractRdapResponseDataRecursiveNamed implements RdapResponseDataRecursiveNamedInterface
 {

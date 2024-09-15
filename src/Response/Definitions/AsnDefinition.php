@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Definitions;
+namespace Jalno\RdapClient\Response\Definitions;
 
-use ArrayAccess\RdapClient\Response\Data\EndAutNum;
-use ArrayAccess\RdapClient\Response\Data\Port43;
-use ArrayAccess\RdapClient\Response\Data\StartAutNum;
+use Jalno\RdapClient\Response\Data\EndAutNum;
+use Jalno\RdapClient\Response\Data\Port43;
+use Jalno\RdapClient\Response\Data\StartAutNum;
 
 class AsnDefinition extends AbstractResponseDefinition
 {

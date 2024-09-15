@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Protocols;
+namespace Jalno\RdapClient\Protocols;
 
-use ArrayAccess\RdapClient\Exceptions\RdapServerNotFoundException;
-use ArrayAccess\RdapClient\Interfaces\RdapClientInterface;
-use ArrayAccess\RdapClient\Interfaces\RdapProtocolInterface;
-use ArrayAccess\RdapClient\Interfaces\RdapRequestInterface;
-use ArrayAccess\RdapClient\Interfaces\RdapServiceInterface;
+use Jalno\RdapClient\Exceptions\RdapServerNotFoundException;
+use Jalno\RdapClient\Interfaces\RdapClientInterface;
+use Jalno\RdapClient\Interfaces\RdapProtocolInterface;
+use Jalno\RdapClient\Interfaces\RdapRequestInterface;
+use Jalno\RdapClient\Interfaces\RdapServiceInterface;
 use function explode;
 use function sprintf;
 use function str_contains;

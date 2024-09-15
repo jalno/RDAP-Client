@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Protocols;
+namespace Jalno\RdapClient\Protocols;
 
-use ArrayAccess\RdapClient\Exceptions\MismatchProtocolBehaviorException;
-use ArrayAccess\RdapClient\Interfaces\RdapClientInterface;
-use ArrayAccess\RdapClient\Interfaces\RdapRequestInterface;
-use ArrayAccess\RdapClient\Interfaces\RdapResponseInterface;
-use ArrayAccess\RdapClient\Response\Ipv4Response;
-use ArrayAccess\RdapClient\Services\Ipv4Service;
+use Jalno\RdapClient\Exceptions\MismatchProtocolBehaviorException;
+use Jalno\RdapClient\Interfaces\RdapClientInterface;
+use Jalno\RdapClient\Interfaces\RdapRequestInterface;
+use Jalno\RdapClient\Interfaces\RdapResponseInterface;
+use Jalno\RdapClient\Response\Ipv4Response;
+use Jalno\RdapClient\Services\Ipv4Service;
 use Exception;
 use function get_class;
 use function sprintf;

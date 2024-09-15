@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Services;
+namespace Jalno\RdapClient\Services;
 
-use ArrayAccess\RdapClient\Client;
-use ArrayAccess\RdapClient\Exceptions\FileNotFoundException;
-use ArrayAccess\RdapClient\Exceptions\InvalidServiceDefinitionException;
-use ArrayAccess\RdapClient\Interfaces\RdapRequestInterface;
-use ArrayAccess\RdapClient\Interfaces\RdapServiceInterface;
+use Jalno\RdapClient\Client;
+use Jalno\RdapClient\Exceptions\FileNotFoundException;
+use Jalno\RdapClient\Exceptions\InvalidServiceDefinitionException;
+use Jalno\RdapClient\Interfaces\RdapRequestInterface;
+use Jalno\RdapClient\Interfaces\RdapServiceInterface;
 use DateTimeImmutable;
 use DateTimeInterface;
 use DateTimeZone;

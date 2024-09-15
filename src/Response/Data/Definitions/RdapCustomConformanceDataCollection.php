@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Data\Definitions;
+namespace Jalno\RdapClient\Response\Data\Definitions;
 
-use ArrayAccess\RdapClient\Interfaces\ResponseData\RdapResponseDataConformanceDataInterface;
-use ArrayAccess\RdapClient\Interfaces\ResponseData\RdapResponseDataInterface;
+use Jalno\RdapClient\Interfaces\ResponseData\RdapResponseDataConformanceDataInterface;
+use Jalno\RdapClient\Interfaces\ResponseData\RdapResponseDataInterface;
 use ArrayIterator;
 use Traversable;
 

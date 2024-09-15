@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Response\Data\Definitions;
+namespace Jalno\RdapClient\Response\Data\Definitions;
 
-use ArrayAccess\RdapClient\Response\Data\Abstracts\AbstractRdapResponseDataRecursiveArrayEmptyName;
-use ArrayAccess\RdapClient\Response\Data\NonStandards\EmptyObject;
+use Jalno\RdapClient\Response\Data\Abstracts\AbstractRdapResponseDataRecursiveArrayEmptyName;
+use Jalno\RdapClient\Response\Data\NonStandards\EmptyObject;
 use Stringable;
 
 class VCardDefinition extends AbstractRdapResponseDataRecursiveArrayEmptyName

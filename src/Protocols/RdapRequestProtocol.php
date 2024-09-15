@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace ArrayAccess\RdapClient\Protocols;
+namespace Jalno\RdapClient\Protocols;
 
-use ArrayAccess\RdapClient\Exceptions\MismatchProtocolBehaviorException;
-use ArrayAccess\RdapClient\Exceptions\RdapRemoteRequestException;
-use ArrayAccess\RdapClient\Interfaces\RdapProtocolInterface;
-use ArrayAccess\RdapClient\Interfaces\RdapRequestInterface;
-use ArrayAccess\RdapClient\Interfaces\RdapResponseInterface;
+use Jalno\RdapClient\Exceptions\MismatchProtocolBehaviorException;
+use Jalno\RdapClient\Exceptions\RdapRemoteRequestException;
+use Jalno\RdapClient\Interfaces\RdapProtocolInterface;
+use Jalno\RdapClient\Interfaces\RdapRequestInterface;
+use Jalno\RdapClient\Interfaces\RdapResponseInterface;
 use Jalno\Http\Exceptions\ResponseException;
 use RuntimeException;
 use function array_pop;
